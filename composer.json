@@ -1,0 +1,40 @@
+{
+    "name": "tots/unimatrix-laravel",
+    "description": "The library for Laravel PHP",
+    "version": "11.0.0",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Tots\\Unimatrix\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Matias Camiletti",
+            "email": "matias.camiletti@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^11",
+        "tots/core-laravel": "dev-main",
+        "tots/auth-2fa-basic-laravel": "dev-main",
+        "tots/auth-laravel": "dev-main"
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/tots-agency/tots-core-laravel.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/tots-agency/tots-auth-laravel.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/tots-agency/tots-auth-2fa-basic-laravel.git"
+        }
+    ]
+}
