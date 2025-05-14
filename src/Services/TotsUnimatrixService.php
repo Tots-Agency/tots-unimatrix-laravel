@@ -54,6 +54,20 @@ class TotsUnimatrixService
         ]);
     }
 
+     public function sendSMSWithTemplateId($phone, $templateId, $params = [])
+    {
+        // Verify if phone start with +
+        if ($phone[0] !== '+') {
+            $phone = '+' . $phone;
+        }
+
+        return $this->generateRequest('sms.message.send', [
+            'to' => $phone,
+            'templateId' => $templateId,
+            'templateData' => $params,
+        ]);
+    }
+
     protected function generateRequest($action, $params = null)
     {
         $body = null;
